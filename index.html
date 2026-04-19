@@ -8,14 +8,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* ===== リセット＆安定化 ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
   color: #333;
   padding-top: 60px;
+  overflow-x: hidden;
 }
 
-/* ナビ */
+/* ===== ナビ ===== */
 nav {
   position: fixed;
   top: 0;
@@ -29,15 +36,35 @@ nav {
   align-items: center;
 }
 
+/* ===== ボタン ===== */
 .btn {
   background: #ff6b6b;
   color: white;
-  padding: 12px 20px;
+  padding: 12px 22px;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
+  display: inline-block;
 }
 
+/* ===== hero（ここが重要修正ポイント）===== */
+.hero {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url("https://images.unsplash.com/photo-1584697964350-3e14c2b5a8e1");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/* ===== セクション ===== */
 .section {
   padding: 70px 20px;
   max-width: 1000px;
@@ -45,18 +72,13 @@ nav {
   text-align: center;
 }
 
-header {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+/* ===== 特徴カード ===== */
 .features {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 30px;
+  justify-content: center;
 }
 
 .card {
@@ -66,13 +88,8 @@ header {
   padding: 20px;
   border-radius: 10px;
 }
-.hero {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
+/* ===== CTA ===== */
 .cta {
   background: #2c3e50;
   color: white;
@@ -80,12 +97,26 @@ header {
   padding: 70px 20px;
 }
 
+/* ===== フッター ===== */
 footer {
   text-align: center;
   padding: 20px;
   background: #111;
   color: white;
 }
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+}
+
 </style>
 </head>
 
@@ -104,7 +135,7 @@ footer {
   </div>
 </nav>
 
-<!-- ヒーロー -->
+<!-- hero -->
 <section class="hero">
   <h1>姫山塾</h1>
   <p>「できない」を「できる」に変える個別指導</p>
@@ -149,6 +180,7 @@ footer {
   <a href="contact.html" class="btn">今すぐ申し込む</a>
 </section>
 
+<!-- フッター -->
 <footer>
   <p>© 姫山塾</p>
 </footer>
