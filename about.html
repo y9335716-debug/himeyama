@@ -22,21 +22,20 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  flex-wrap: wrap;
 }
 
-/* 左右の余白調整 */
-nav div {
+/* 左右ブロック */
+nav > div {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
 }
 
-/* リンク崩れ防止 */
+/* リンク */
 nav a {
   white-space: nowrap;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .section { padding:60px 20px; text-align:center; }
