@@ -2,39 +2,83 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>問い合わせ | 姫山塾</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>問い合わせ | 姫山塾</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script defer src="nav.js"></script>
 
 <style>
-body { margin:0; font-family:sans-serif; padding-top:80px; text-align:center; }
-nav { position:fixed; top:0; width:100%; background:white; padding:10px; }
-.menu a { margin:0 8px; text-decoration:none; }
-form { display:flex; flex-direction:column; width:300px; margin:auto; }
-input, textarea { margin:5px 0; padding:8px; }
+.form-box {
+  max-width: 600px;
+  margin: auto;
+  background: #f8f8f8;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
 </style>
+
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">姫山塾</div>
-  <div class="menu">
-    <a href="index.html">トップ</a>
-    <a href="features.html">特徴</a>
-    <a href="teacher.html">講師</a>
-    <a href="about.html">概要</a>
-    <a href="contact.html">問い合わせ</a>
+<section class="section">
+  <h1>お問い合わせ</h1>
+  <p>無料体験・ご相談はこちら</p>
+</section>
+
+<section class="section">
+  <div class="form-box">
+
+    <form action="https://formspree.io/f/your-id" method="POST">
+
+      <input type="text" name="name" placeholder="お名前" required>
+
+      <input type="email" name="email" placeholder="メールアドレス" required>
+
+      <input type="tel" name="phone" placeholder="電話番号">
+
+      <select name="grade" required>
+        <option value="">学年を選択</option>
+        <option>小学生</option>
+        <option>中学生</option>
+        <option>高校生</option>
+      </select>
+
+      <textarea name="message" placeholder="ご相談内容" required></textarea>
+
+      <button type="submit">送信する</button>
+
+    </form>
+
   </div>
-</nav>
+</section>
 
-<h1>お問い合わせ</h1>
-
-<form action="https://formspree.io/f/your-id" method="POST">
-  <input type="text" name="name" placeholder="名前">
-  <input type="email" name="email" placeholder="メール">
-  <textarea name="message" placeholder="内容"></textarea>
-  <button>送信</button>
-</form>
+<section class="cta section">
+  <h2>お気軽にご相談ください</h2>
+  <p>無理な勧誘はありません</p>
+</section>
 
 </body>
 </html>
