@@ -9,75 +9,37 @@
 
 <link rel="stylesheet" href="style.css">
 <script defer src="nav.js"></script>
-
-<style>
-.form-box {
-  max-width: 600px;
-  margin: auto;
-  background: #f8f8f8;
-  padding: 25px;
-  border-radius: 12px;
-}
-
-input, textarea, select {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-button {
-  width: 100%;
-  padding: 14px;
-  background: #ff6b6b;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
-</style>
-
 </head>
 
 <body>
 
 <section class="section">
   <h1>お問い合わせ</h1>
-  <p>無料体験・ご相談はこちら</p>
+  <p>無料体験・相談受付中</p>
 </section>
 
 <section class="section">
-  <div class="form-box">
 
-    <form action="https://formspree.io/f/your-id" method="POST">
+  <form class="card" style="max-width:600px; margin:auto;"
+        action="https://formspree.io/f/your-id"
+        method="POST">
 
-      <input type="text" name="name" placeholder="お名前" required>
+    <input type="text" name="name" placeholder="お名前" required>
+    <input type="email" name="email" placeholder="メールアドレス" required>
+    <input type="tel" name="phone" placeholder="電話番号">
 
-      <input type="email" name="email" placeholder="メールアドレス" required>
+    <textarea name="message" placeholder="ご相談内容" required></textarea>
 
-      <input type="tel" name="phone" placeholder="電話番号">
+    <button type="submit" class="btn" style="width:100%;">
+      送信する
+    </button>
 
-      <select name="grade" required>
-        <option value="">学年を選択</option>
-        <option>小学生</option>
-        <option>中学生</option>
-        <option>高校生</option>
-      </select>
+  </form>
 
-      <textarea name="message" placeholder="ご相談内容" required></textarea>
-
-      <button type="submit">送信する</button>
-
-    </form>
-
-  </div>
 </section>
 
-<section class="cta section">
+<section class="cta-box">
   <h2>お気軽にご相談ください</h2>
-  <p>無理な勧誘はありません</p>
 </section>
 
 </body>
