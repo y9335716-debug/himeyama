@@ -2,33 +2,64 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>特徴 | 姫山塾</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特徴 | 姫山塾</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script defer src="nav.js"></script>
 
 <style>
-body { margin:0; font-family:sans-serif; padding-top:80px; }
-nav { text-align:center; padding:10px; position:fixed; top:0; width:100%; background:white; }
-.menu a { margin:0 8px; text-decoration:none; }
-.section { text-align:center; padding:60px 20px; }
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 260px;
+}
 </style>
+
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">姫山塾</div>
-  <div class="menu">
-    <a href="index.html">トップ</a>
-    <a href="features.html">特徴</a>
-    <a href="teacher.html">講師</a>
-    <a href="about.html">概要</a>
-    <a href="contact.html">問い合わせ</a>
-  </div>
-</nav>
+<section class="section">
+  <h1>姫山塾の特徴</h1>
+</section>
 
 <section class="section">
-  <h1>特徴</h1>
-  <p>完全個別指導・成績保証・徹底サポート</p>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <h3>完全個別指導</h3>
+      <p>生徒一人ひとりに合わせた学習設計</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>成績保証</h3>
+      <p>結果にこだわる指導体制</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>学習サポート</h3>
+      <p>家庭学習まで徹底フォロー</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta section">
+  <h2>まずは無料体験へ</h2>
+  <a href="contact.html" class="btn">申し込む</a>
 </section>
 
 </body>
