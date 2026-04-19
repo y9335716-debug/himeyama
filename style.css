@@ -170,3 +170,14 @@ body {
     font-size: 18px;
   }
 }
+
+.logo a {
+  text-decoration: none;   /* 下線消す */
+  color: #1f3a5f;         /* 濃い青 */
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.logo a:hover {
+  opacity: 0.7;
+}
