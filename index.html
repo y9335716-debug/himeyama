@@ -11,32 +11,9 @@ body {
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
   color: #333;
+  padding-top: 60px;
 }
 
-<nav style="
-position:fixed;
-top:0;
-width:100%;
-background:white;
-padding:10px 20px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
-z-index:1000;
-display:flex;
-justify-content:space-between;
-align-items:center;
-">
-
-<div style="font-weight:bold;">姫山塾</div>
-
-<div>
-  <a href="#features" style="margin:0 10px;">特徴</a>
-  <a href="#teacher" style="margin:0 10px;">講師</a>
-  <a href="#about" style="margin:0 10px;">概要</a>
-  <a href="#contact" style="margin:0 10px;">問い合わせ</a>
-</div>
-
-</nav>
-  
 header {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
   url("https://images.unsplash.com/photo-1584697964350-3e14c2b5a8e1");
@@ -134,13 +111,38 @@ footer {
 
 <body>
 
+<!-- ナビ -->
+<nav style="
+position:fixed;
+top:0;
+width:100%;
+background:white;
+padding:10px 20px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+">
+<div style="font-weight:bold;">姫山塾</div>
+
+<div>
+  <a href="#features" style="margin:0 10px;">特徴</a>
+  <a href="#teacher" style="margin:0 10px;">講師</a>
+  <a href="#about" style="margin:0 10px;">概要</a>
+  <a href="#contact" style="margin:0 10px;">問い合わせ</a>
+</div>
+</nav>
+
+<!-- ヘッダー -->
 <header>
   <h1>姫山塾</h1>
   <p>「できない」を「できる」に変える個別指導</p>
   <a href="#contact" class="btn">無料体験はこちら</a>
 </header>
 
-<section class="section">
+<!-- 特徴 -->
+<section class="section" id="features">
   <h2>姫山塾の特徴</h2>
   <div class="features">
     <div class="card">
@@ -158,18 +160,39 @@ footer {
   </div>
 </section>
 
+<!-- 講師 -->
+<section class="section" id="teacher">
+  <h2>講師紹介</h2>
+  <p style="text-align:center;">
+    代表講師：山田 太郎<br>
+    指導歴10年｜一人ひとりに寄り添った指導
+  </p>
+</section>
+
+<!-- 実績 -->
 <section class="results">
   <h2>実績</h2>
   <p>・偏差値 +15アップ<br>・第一志望合格多数</p>
 </section>
 
+<!-- 概要 -->
+<section class="section" id="about" style="background:#f4f4f4;">
+  <h2>塾概要</h2>
+  <p style="text-align:center;">
+    所在地：〇〇市〇〇町<br>
+    対象：小学生・中学生・高校生<br>
+    営業時間：16:00〜22:00
+  </p>
+</section>
+
+<!-- CTA -->
 <section class="cta">
   <h2>まずは無料体験へ</h2>
   <p>お気軽にお問い合わせください</p>
   <a href="#contact" class="btn">今すぐ申し込む</a>
 </section>
 
-<!-- ここから追加 -->
+<!-- 問い合わせ -->
 <section class="section" id="contact">
   <h2>お問い合わせ</h2>
   <p style="text-align:center;">30秒で完了｜無料体験受付中</p>
@@ -177,9 +200,7 @@ footer {
   <form action="https://formspree.io/f/あなたのID" method="POST" class="contact-form">
 
     <input type="text" name="name" placeholder="お名前" required>
-
     <input type="email" name="email" placeholder="メールアドレス" required>
-
     <input type="tel" name="phone" placeholder="電話番号">
 
     <select name="grade" required>
@@ -191,14 +212,12 @@ footer {
 
     <textarea name="message" placeholder="お問い合わせ内容" required></textarea>
 
-    <!-- スパム対策 -->
     <input type="text" name="_gotcha" style="display:none">
 
     <button type="submit">無料体験に申し込む</button>
 
   </form>
 </section>
-<!-- ここまで -->
 
 <footer>
   <p>© 姫山塾</p>
