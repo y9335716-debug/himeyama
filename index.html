@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>姫山塾</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
 body {
   margin: 0;
@@ -23,12 +24,6 @@ header {
 
 header h1 {
   font-size: 40px;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 18px;
-  margin-bottom: 20px;
 }
 
 .btn {
@@ -44,11 +39,6 @@ header p {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 .features {
@@ -78,6 +68,37 @@ h2 {
   padding: 60px 20px;
 }
 
+/* フォーム */
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  background: #ff6b6b;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 footer {
   text-align: center;
   padding: 20px;
@@ -92,7 +113,7 @@ footer {
 <header>
   <h1>姫山塾</h1>
   <p>「できない」を「できる」に変える個別指導</p>
-  <a href="#" class="btn">無料体験はこちら</a>
+  <a href="#contact" class="btn">無料体験はこちら</a>
 </header>
 
 <section class="section">
@@ -121,8 +142,39 @@ footer {
 <section class="cta">
   <h2>まずは無料体験へ</h2>
   <p>お気軽にお問い合わせください</p>
-  <a href="#" class="btn">今すぐ申し込む</a>
+  <a href="#contact" class="btn">今すぐ申し込む</a>
 </section>
+
+<!-- ここから追加 -->
+<section class="section" id="contact">
+  <h2>お問い合わせ</h2>
+  <p style="text-align:center;">30秒で完了｜無料体験受付中</p>
+
+  <form action="https://formspree.io/f/あなたのID" method="POST" class="contact-form">
+
+    <input type="text" name="name" placeholder="お名前" required>
+
+    <input type="email" name="email" placeholder="メールアドレス" required>
+
+    <input type="tel" name="phone" placeholder="電話番号">
+
+    <select name="grade" required>
+      <option value="">学年を選択</option>
+      <option>小学生</option>
+      <option>中学生</option>
+      <option>高校生</option>
+    </select>
+
+    <textarea name="message" placeholder="お問い合わせ内容" required></textarea>
+
+    <!-- スパム対策 -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button type="submit">無料体験に申し込む</button>
+
+  </form>
+</section>
+<!-- ここまで -->
 
 <footer>
   <p>© 姫山塾</p>
