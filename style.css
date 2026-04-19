@@ -4,60 +4,101 @@
 
 body {
   margin: 0;
-  font-family: 'Noto Sans JP', sans-serif;
-  padding-top: 80px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #1a1a1a;
+  background: #f7f9fc;
+  line-height: 1.8;
   overflow-x: hidden;
 }
 
-/* ナビ */
-.nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
-  text-align: center;
-}
-
-.logo {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-/* 共通セクション */
+/* ===== セクション ===== */
 .section {
-  padding: 60px 20px;
+  padding: 120px 20px;
   text-align: center;
 }
 
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  background:
+    linear-gradient(135deg, rgba(31,58,95,0.9), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1584697964350-3e14c2b5a8e1");
+
+  background-size: cover;
+  background-position: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 20px 0 30px;
+}
+
+/* ===== ボタン ===== */
 .btn {
   background: #ff6b6b;
   color: white;
-  padding: 12px 20px;
+  padding: 14px 28px;
   border-radius: 6px;
   text-decoration: none;
+  font-weight: bold;
   display: inline-block;
+  transition: 0.3s;
 }
 
-/* CTA */
-.cta {
-  background: #2c3e50;
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ===== カード ===== */
+.card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  width: 280px;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* ===== CTA ===== */
+.cta-box {
+  background: #1f3a5f;
   color: white;
-  padding: 60px 20px;
+  padding: 120px 20px;
+}
+
+/* ===== 実績 ===== */
+.result {
+  background: white;
 }
