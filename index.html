@@ -9,180 +9,44 @@
 
 <link rel="stylesheet" href="style.css">
 <script defer src="nav.js"></script>
-
-<style>
-
-/* ===== 全体リセット ===== */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Noto Sans JP', sans-serif;
-  color: #333;
-  overflow-x: hidden;
-}
-
-/* ===== 共通セクション ===== */
-.section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 28px;
-  margin-bottom: 40px;
-}
-
-/* ===== HERO ===== */
-.hero {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-
-  background:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url("https://images.unsplash.com/photo-1584697964350-3e14c2b5a8e1");
-
-  background-size: cover;
-  background-position: center;
-  padding: 0 20px;
-}
-
-.hero h1 {
-  font-size: 44px;
-  margin: 0;
-}
-
-.hero p {
-  font-size: 18px;
-  margin: 15px 0 25px;
-}
-
-/* ===== ボタン（統一感強化）===== */
-.btn {
-  background: #ff6b6b;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  opacity: 0.85;
-}
-
-/* ===== カード ===== */
-.card-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.card {
-  width: 260px;
-  background: #f7f7f7;
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-/* ===== 実績 ===== */
-.result {
-  background: #f4f4f4;
-}
-
-/* ===== CTA ===== */
-.cta-box {
-  background: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.cta-box h2 {
-  margin-bottom: 15px;
-}
-
-/* ===== レスポンシブ ===== */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 320px;
-  }
-}
-
-</style>
-
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <h1>姫山塾</h1>
   <p>「できない」を「できる」に変える個別指導</p>
   <a href="contact.html" class="btn">無料体験はこちら</a>
 </section>
 
-<!-- 強み -->
 <section class="section">
   <h2>姫山塾の強み</h2>
 
   <div class="card-wrap">
-
     <div class="card">
       <h3>完全個別指導</h3>
-      <p>一人ひとりに合わせた学習設計</p>
+      <p>一人ひとりに最適化された学習</p>
     </div>
 
     <div class="card">
       <h3>成績アップ保証</h3>
-      <p>結果にこだわる指導</p>
+      <p>結果重視のカリキュラム</p>
     </div>
 
     <div class="card">
       <h3>徹底サポート</h3>
-      <p>保護者との連携・学習管理</p>
+      <p>保護者連携・学習管理</p>
     </div>
-
   </div>
 </section>
 
-<!-- 実績 -->
 <section class="section result">
   <h2>実績</h2>
-  <p>
-    偏差値 +15アップ<br>
-    第一志望合格多数
-  </p>
+  <p>偏差値 +15アップ / 第一志望合格多数</p>
 </section>
 
-<!-- 流れ -->
-<section class="section">
-  <h2>入塾の流れ</h2>
-  <p>
-    ①お問い合わせ → ②無料体験 → ③面談 → ④授業開始
-  </p>
-</section>
-
-<!-- CTA -->
 <section class="cta-box">
   <h2>まずは無料体験へ</h2>
-  <p>無理な勧誘はありません</p>
   <a href="contact.html" class="btn">申し込む</a>
 </section>
 
