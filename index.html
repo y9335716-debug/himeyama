@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>姫山塾</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
@@ -14,38 +15,49 @@ body {
   padding-top: 60px;
 }
 
-header {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-  url("https://images.unsplash.com/photo-1584697964350-3e14c2b5a8e1");
-  background-size: cover;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-header h1 {
-  font-size: 40px;
+/* ナビ */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn {
   background: #ff6b6b;
   color: white;
-  padding: 12px 25px;
+  padding: 12px 20px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 70px 20px;
   max-width: 1000px;
   margin: auto;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url("https://images.unsplash.com/photo-1584697964350-3e14c2b5a8e1");
+  background-size: cover;
+  color: white;
+  padding: 120px 20px;
 }
 
 .features {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .card {
@@ -56,48 +68,10 @@ header h1 {
   border-radius: 10px;
 }
 
-.results {
-  background: #f4f4f4;
-  text-align: center;
-  padding: 60px 20px;
-}
-
 .cta {
   background: #2c3e50;
   color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-/* フォーム */
-.contact-form {
-  max-width: 600px;
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.contact-form textarea {
-  height: 150px;
-}
-
-.contact-form button {
-  background: #ff6b6b;
-  color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
+  padding: 70px 20px;
 }
 
 footer {
@@ -112,47 +86,40 @@ footer {
 <body>
 
 <!-- ナビ -->
-<nav style="
-position:fixed;
-top:0;
-width:100%;
-background:white;
-padding:10px 20px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
-z-index:1000;
-display:flex;
-justify-content:space-between;
-align-items:center;
-">
-<div style="font-weight:bold;">姫山塾</div>
+<nav>
+  <div style="font-weight:bold;">姫山塾</div>
 
-<div>
-  <a href="#features" style="margin:0 10px;">特徴</a>
-  <a href="#teacher" style="margin:0 10px;">講師</a>
-  <a href="#about" style="margin:0 10px;">概要</a>
-  <a href="#contact" style="margin:0 10px;">問い合わせ</a>
-</div>
+  <div>
+    <a href="index.html" style="margin:0 10px;">トップ</a>
+    <a href="features.html" style="margin:0 10px;">特徴</a>
+    <a href="teacher.html" style="margin:0 10px;">講師</a>
+    <a href="about.html" style="margin:0 10px;">概要</a>
+    <a href="contact.html" style="margin:0 10px;">問い合わせ</a>
+  </div>
 </nav>
 
-<!-- ヘッダー -->
-<header>
+<!-- ヒーロー -->
+<section class="hero">
   <h1>姫山塾</h1>
   <p>「できない」を「できる」に変える個別指導</p>
-  <a href="#contact" class="btn">無料体験はこちら</a>
-</header>
+  <a href="contact.html" class="btn">無料体験はこちら</a>
+</section>
 
-<!-- 特徴 -->
-<section class="section" id="features">
-  <h2>姫山塾の特徴</h2>
+<!-- 強み -->
+<section class="section">
+  <h2>姫山塾の強み</h2>
+
   <div class="features">
     <div class="card">
       <h3>完全個別指導</h3>
-      <p>一人ひとりに合わせた学習プラン</p>
+      <p>一人ひとりに最適な学習プラン</p>
     </div>
+
     <div class="card">
       <h3>成績アップ保証</h3>
       <p>結果にこだわる指導</p>
     </div>
+
     <div class="card">
       <h3>安心サポート</h3>
       <p>保護者との連携も重視</p>
@@ -160,28 +127,12 @@ align-items:center;
   </div>
 </section>
 
-<!-- 講師 -->
-<section class="section" id="teacher">
-  <h2>講師紹介</h2>
-  <p style="text-align:center;">
-    代表講師：山田 太郎<br>
-    指導歴10年｜一人ひとりに寄り添った指導
-  </p>
-</section>
-
 <!-- 実績 -->
-<section class="results">
+<section class="section" style="background:#f4f4f4;">
   <h2>実績</h2>
-  <p>・偏差値 +15アップ<br>・第一志望合格多数</p>
-</section>
-
-<!-- 概要 -->
-<section class="section" id="about" style="background:#f4f4f4;">
-  <h2>塾概要</h2>
-  <p style="text-align:center;">
-    所在地：〇〇市〇〇町<br>
-    対象：小学生・中学生・高校生<br>
-    営業時間：16:00〜22:00
+  <p>
+    ・偏差値 +15アップ<br>
+    ・第一志望合格多数
   </p>
 </section>
 
@@ -189,34 +140,7 @@ align-items:center;
 <section class="cta">
   <h2>まずは無料体験へ</h2>
   <p>お気軽にお問い合わせください</p>
-  <a href="#contact" class="btn">今すぐ申し込む</a>
-</section>
-
-<!-- 問い合わせ -->
-<section class="section" id="contact">
-  <h2>お問い合わせ</h2>
-  <p style="text-align:center;">30秒で完了｜無料体験受付中</p>
-
-  <form action="https://formspree.io/f/あなたのID" method="POST" class="contact-form">
-
-    <input type="text" name="name" placeholder="お名前" required>
-    <input type="email" name="email" placeholder="メールアドレス" required>
-    <input type="tel" name="phone" placeholder="電話番号">
-
-    <select name="grade" required>
-      <option value="">学年を選択</option>
-      <option>小学生</option>
-      <option>中学生</option>
-      <option>高校生</option>
-    </select>
-
-    <textarea name="message" placeholder="お問い合わせ内容" required></textarea>
-
-    <input type="text" name="_gotcha" style="display:none">
-
-    <button type="submit">無料体験に申し込む</button>
-
-  </form>
+  <a href="contact.html" class="btn">今すぐ申し込む</a>
 </section>
 
 <footer>
