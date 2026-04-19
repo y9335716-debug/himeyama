@@ -15,7 +15,7 @@ nav {
   top: 0;
   width: 100%;
   background: white;
-  padding: 10px 20px;
+  padding: 10px 15px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
 
@@ -23,7 +23,20 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  flex-wrap: wrap;   /* ←これ重要 */
+  flex-wrap: wrap;
+}
+
+/* 左右の余白調整 */
+nav div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* リンク崩れ防止 */
+nav a {
+  white-space: nowrap;
+  font-size: 14px;
 }
 
 .section { padding:60px 20px; text-align:center; }
