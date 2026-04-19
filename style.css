@@ -181,3 +181,13 @@ body {
 .logo a:hover {
   opacity: 0.7;
 }
+
+.menu a.active {
+  color: #ff6b6b;
+  font-weight: 700;
+}
+
+/* 下線も常時表示 */
+.menu a.active::after {
+  width: 100%;
+}
