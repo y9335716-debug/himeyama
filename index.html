@@ -5,113 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>姫山塾</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: 'Noto Sans JP', sans-serif;
-  padding-top: 80px;
-  overflow-x: hidden;
-}
-
-/* ナビ */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
-  text-align: center;
-}
-
-.logo { font-weight: bold; margin-bottom: 6px; }
-
-.menu {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
-}
-
-/* hero */
-.hero {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-  url("https://images.unsplash.com/photo-1584697964350-3e14c2b5a8e1");
-  background-size: cover;
-}
-
-.btn {
-  background: #ff6b6b;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-/* section */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.card {
-  background: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 10px;
-  display: inline-block;
-  width: 250px;
-}
-
-.cta {
-  background: #2c3e50;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  color: white;
-}
-</style>
+<link rel="stylesheet" href="style.css">
+<script defer src="nav.js"></script>
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">姫山塾</div>
-  <div class="menu">
-    <a href="index.html">トップ</a>
-    <a href="features.html">特徴</a>
-    <a href="teacher.html">講師</a>
-    <a href="about.html">概要</a>
-    <a href="contact.html">問い合わせ</a>
-  </div>
-</nav>
-
-<section class="hero">
+<section class="section" style="min-height:80vh;">
   <h1>姫山塾</h1>
   <p>できないをできるに変える</p>
   <a href="contact.html" class="btn">無料体験</a>
@@ -119,10 +19,7 @@ footer {
 
 <section class="section">
   <h2>強み</h2>
-
-  <div class="card">個別指導</div>
-  <div class="card">成績保証</div>
-  <div class="card">安心サポート</div>
+  <p>個別指導・成績保証・安心サポート</p>
 </section>
 
 <section class="cta">
@@ -130,7 +27,35 @@ footer {
   <a href="contact.html" class="btn">申し込む</a>
 </section>
 
-<footer>© 姫山塾</footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>姫山塾</title>
+
+<link rel="stylesheet" href="style.css">
+<script defer src="nav.js"></script>
+</head>
+
+<body>
+
+<section class="section" style="min-height:80vh;">
+  <h1>姫山塾</h1>
+  <p>できないをできるに変える</p>
+  <a href="contact.html" class="btn">無料体験</a>
+</section>
+
+<section class="section">
+  <h2>強み</h2>
+  <p>個別指導・成績保証・安心サポート</p>
+</section>
+
+<section class="cta">
+  <h2>まずは無料体験へ</h2>
+  <a href="contact.html" class="btn">申し込む</a>
+</section>
 
 </body>
 </html>
