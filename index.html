@@ -8,185 +8,129 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* ===== リセット＆安定化 ===== */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
-  color: #333;
-  padding-top: 60px;
+  padding-top: 80px;
   overflow-x: hidden;
 }
 
-/* ===== ナビ ===== */
+/* ナビ */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   background: white;
-  padding: 10px 20px;
+  padding: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
+  text-align: center;
+}
 
+.logo { font-weight: bold; margin-bottom: 6px; }
+
+.menu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
-  
-/* ===== ボタン ===== */
-.btn {
-  background: #ff6b6b;
-  color: white;
-  padding: 12px 22px;
+
+.menu a {
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  display: inline-block;
+  color: #333;
+  font-size: 14px;
 }
 
-/* ===== hero（ここが重要修正ポイント）===== */
+/* hero */
 .hero {
-  width: 100%;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 20px;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  color: white;
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
   url("https://images.unsplash.com/photo-1584697964350-3e14c2b5a8e1");
   background-size: cover;
-  background-position: center;
+}
+
+.btn {
+  background: #ff6b6b;
   color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
 }
 
-/* ===== セクション ===== */
+/* section */
 .section {
-  padding: 70px 20px;
-  max-width: 1000px;
-  margin: auto;
+  padding: 60px 20px;
   text-align: center;
-}
-
-/* ===== 特徴カード ===== */
-.features {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-  justify-content: center;
 }
 
 .card {
-  flex: 1;
-  min-width: 250px;
-  background: #f9f9f9;
+  background: #f4f4f4;
   padding: 20px;
   border-radius: 10px;
+  margin: 10px;
+  display: inline-block;
+  width: 250px;
 }
 
-/* ===== CTA ===== */
 .cta {
   background: #2c3e50;
   color: white;
+  padding: 60px 20px;
   text-align: center;
-  padding: 70px 20px;
 }
 
-/* ===== フッター ===== */
 footer {
   text-align: center;
   padding: 20px;
   background: #111;
   color: white;
 }
-
-/* ===== スマホ対応 ===== */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .features {
-    flex-direction: column;
-  }
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- ナビ -->
 <nav>
-  <div style="font-weight:bold;">姫山塾</div>
-
-  <div>
-    <a href="index.html" style="margin:0 10px;">トップ</a>
-    <a href="features.html" style="margin:0 10px;">特徴</a>
-    <a href="teacher.html" style="margin:0 10px;">講師</a>
-    <a href="about.html" style="margin:0 10px;">概要</a>
-    <a href="contact.html" style="margin:0 10px;">問い合わせ</a>
+  <div class="logo">姫山塾</div>
+  <div class="menu">
+    <a href="index.html">トップ</a>
+    <a href="features.html">特徴</a>
+    <a href="teacher.html">講師</a>
+    <a href="about.html">概要</a>
+    <a href="contact.html">問い合わせ</a>
   </div>
 </nav>
 
-<!-- hero -->
 <section class="hero">
   <h1>姫山塾</h1>
-  <p>「できない」を「できる」に変える個別指導</p>
-  <a href="contact.html" class="btn">無料体験はこちら</a>
+  <p>できないをできるに変える</p>
+  <a href="contact.html" class="btn">無料体験</a>
 </section>
 
-<!-- 強み -->
 <section class="section">
-  <h2>姫山塾の強み</h2>
+  <h2>強み</h2>
 
-  <div class="features">
-    <div class="card">
-      <h3>完全個別指導</h3>
-      <p>一人ひとりに最適な学習プラン</p>
-    </div>
-
-    <div class="card">
-      <h3>成績アップ保証</h3>
-      <p>結果にこだわる指導</p>
-    </div>
-
-    <div class="card">
-      <h3>安心サポート</h3>
-      <p>保護者との連携も重視</p>
-    </div>
-  </div>
+  <div class="card">個別指導</div>
+  <div class="card">成績保証</div>
+  <div class="card">安心サポート</div>
 </section>
 
-<!-- 実績 -->
-<section class="section" style="background:#f4f4f4;">
-  <h2>実績</h2>
-  <p>
-    ・偏差値 +15アップ<br>
-    ・第一志望合格多数
-  </p>
-</section>
-
-<!-- CTA -->
 <section class="cta">
   <h2>まずは無料体験へ</h2>
-  <p>お気軽にお問い合わせください</p>
-  <a href="contact.html" class="btn">今すぐ申し込む</a>
+  <a href="contact.html" class="btn">申し込む</a>
 </section>
 
-<!-- フッター -->
-<footer>
-  <p>© 姫山塾</p>
-</footer>
+<footer>© 姫山塾</footer>
 
 </body>
 </html>
