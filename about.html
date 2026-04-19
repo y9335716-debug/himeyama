@@ -8,6 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* ===== 基本リセット ===== */
 * {
   box-sizing: border-box;
 }
@@ -15,11 +17,11 @@
 body {
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
-  padding-top: 60px;
+  padding-top: 80px;
   overflow-x: hidden;
 }
 
-/* ===== ナビ（修正版）===== */
+/* ===== ナビ（完全安定版）===== */
 nav {
   position: fixed;
   top: 0;
@@ -30,24 +32,30 @@ nav {
   z-index: 1000;
 
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 6px;
 }
 
-/* 左右ブロックを安定化 */
-nav > div {
+/* ロゴ */
+.logo {
+  font-weight: bold;
+}
+
+/* メニュー */
+.menu {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 12px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 /* リンク */
-nav a {
-  white-space: nowrap;
+.menu a {
   font-size: 14px;
   text-decoration: none;
   color: #333;
+  white-space: nowrap;
 }
 
 /* ===== メイン ===== */
@@ -58,13 +66,8 @@ nav a {
 
 /* ===== スマホ対応 ===== */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  nav > div {
-    justify-content: center;
+  .menu {
+    flex-wrap: wrap;
   }
 }
 </style>
@@ -74,9 +77,9 @@ nav a {
 
 <!-- ナビ -->
 <nav>
-  <div><b>姫山塾</b></div>
+  <div class="logo">姫山塾</div>
 
-  <div>
+  <div class="menu">
     <a href="index.html">トップ</a>
     <a href="features.html">特徴</a>
     <a href="teacher.html">講師</a>
@@ -85,7 +88,7 @@ nav a {
   </div>
 </nav>
 
-<!-- 内容 -->
+<!-- コンテンツ -->
 <section class="section">
   <h1>講師紹介</h1>
 
